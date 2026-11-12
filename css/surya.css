@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+:root {
+    --surya-navy:#183d66;
+    --surya-blue:#1674a5;
+    --surya-yellow:#f4c542;
+    --surya-magenta:#d51b79;
+    --surya-cream:#fff9ec;
+    --surya-ink:#263342;
+    --surya-muted:#6b7280;
+    --surya-green:#198754
+}
+* {
+    box-sizing:border-box
+}
+html {
+    scroll-behavior:smooth
+}
+body {
+    font-family:'DM Sans',sans-serif;
+    color:var(--surya-ink);
+    background:#fff;
+    overflow-x:hidden
+}
+a {
+    text-decoration:none
+}
+.navbar {
+    background:rgba(255,255,255,.97);
+    box-shadow:0 4px 24px rgba(16,42,67,.08);
+    backdrop-filter:blur(12px);
+    z-index:1030
+}
+.navbar-brand {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0
+}
+.navbar-brand img {
+    width:132px;
+    height:auto;
+    object-fit:contain
+}
+.brand-text {
+    font-weight:800;
+    letter-spacing:.04em;
+    color:var(--surya-magenta);
+    font-size:1.15rem;
+    line-height:1
+}
+.brand-text small {
+    display:block;
+    color:var(--surya-navy);
+    font-size:.58rem;
+    letter-spacing:.12em;
+    margin-top:5px
+}
+.navbar .nav-link {
+    font-weight:700;
+    color:#263b52!important;
+    padding:.7rem .75rem!important;
+    font-size:.93rem
+}
+.navbar .nav-link:hover,.navbar .nav-link.active {
+    color:var(--surya-magenta)!important
+}
+.navbar-toggler {
+    border:1px solid #e4e8ed;
+    padding:.45rem .65rem
+}
+.btn-primary {
+    background:var(--surya-magenta);
+    border-color:var(--surya-magenta)
+}
+.btn-primary:hover {
+    background:#b81365;
+    border-color:#b81365
+}
+.btn-warning {
+    background:var(--surya-yellow);
+    border-color:var(--surya-yellow);
+    color:#27384a
+}
+.btn-outline-primary {
+    border-color:var(--surya-magenta);
+    color:var(--surya-magenta)
+}
+.btn-outline-primary:hover {
+    background:var(--surya-magenta);
+    border-color:var(--surya-magenta)
+}
+
+.hero-home {
+    position:relative;
+    min-height:490px;
+    padding:150px 0 90px;
+    background:linear-gradient(90deg,rgba(15,43,68,.91),rgba(15,43,68,.72)),url('../assets/products/tampak-depan-pabrik.jpg') center/cover no-repeat;
+    color:#ffffff;
+    display:flex;
+    align-items:center
+}
+
+.hero-home h1,.page-hero h1 {
+    font-family:'Playfair Display',serif;
+    font-weight:800;
+    line-height:1.08
+}
+
+.hero-home h1 {
+    font-size:clamp(2.2rem,4vw,4rem);
+    max-width:none;
+    width:100%;
+    white-space:nowrap;
+    color:#ffffff;
+}
+
+.hero-home h1 em,.page-hero h1 em {
+    font-style:normal;
+    color:var(--surya-yellow)
+}
+
+.hero-home p {
+    font-size:1.1rem;
+    max-width:100%;
+    width:100%;
+    color:#edf3f8;
+    line-height:1.7;
+}
+
+.hero-kicker,.eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-transform:uppercase;
+    letter-spacing:.13em;
+    font-size:.75rem;
+    font-weight:800;
+    color:var(--surya-yellow)
+}
+
+.hero-trust {
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:30px;
+    font-size:.88rem;
+    color:#f6f8fa
+}
+
+.hero-trust i {
+    color:var(--surya-yellow);
+    margin-right:7px
+}
+
+.hero-side-photo {
+    width:100%;
+    max-height:440px;
+    object-fit:cover;
+    border-radius:28px;
+    border:8px solid rgba(255,255,255,.18);
+    box-shadow:0 25px 60px rgba(0,0,0,.22)
+}
+
+/* RESPONSIVE TABLET DAN HP */
+@media(max-width:991.98px) {
+    .hero-home h1 {
+        white-space:normal;
+        font-size:clamp(2.2rem,5vw,3.5rem);
+    }
+}
+
+@media(max-width:575.98px) {
+    .hero-home h1 {
+        font-size:2.2rem;
+        white-space:normal;
+    }
+
+    .hero-home p {
+        font-size:1rem;
+    }
+}
+
+
+.section-pad {
+    padding:84px 0
+}
+.soft-section {
+    background:var(--surya-cream)
+}
+.section-title {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,3.5vw,3rem);
+    font-weight:800;
+    color:var(--surya-navy);
+    line-height:1.15
+}
+.section-title em {
+    font-style:normal;
+    color:var(--surya-magenta)
+}
+.section-lead {
+    color:var(--surya-muted);
+    max-width:700px
+}
+.section-heading {
+    text-align:center;
+    margin:0 auto 42px
+}
+.section-heading .eyebrow {
+    color:var(--surya-magenta)
+}
+.content-photo {
+    width:100%;
+    max-height:480px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 18px 45px rgba(24,61,102,.12)
+}
+.stat-strip {
+    background:var(--surya-navy);
+    color:#fff;
+    padding:28px 0
+}
+.stat-item {
+    text-align:center
+}
+.stat-item strong {
+    display:block;
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    color:var(--surya-yellow)
+}
+.stat-item span {
+    font-size:.88rem;
+    color:#dbe6ef
+}
+.info-card,.product-card,.process-card,.legal-card,.team-card {
+    height:100%;
+    border:1px solid #edf0f3;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 12px 35px rgba(22,48,75,.06);
+    overflow:hidden;
+    transition:.25s
+}
+.info-card:hover,.product-card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 18px 42px rgba(22,48,75,.12)
+}
+.info-card {
+    padding:26px
+}
+.icon-bubble {
+    width:54px;
+    height:54px;
+    border-radius:16px;
+    background:#fff1f7;
+    color:var(--surya-magenta);
+    display:grid;
+    place-items:center;
+    font-size:1.35rem;
+    margin-bottom:18px
+}
+.info-card h4,.process-card h4 {
+    font-weight:800;
+    color:var(--surya-navy);
+    font-size:1.1rem
+}
+.info-card p {
+    color:var(--surya-muted);
+    margin:0
+}
+.product-card img {
+    width:100%;
+    height:245px;
+    object-fit:contain;
+    background:#fffaf0;
+    padding:12px
+}
+.product-card .card-body {
+    padding:20px
+}
+.product-card h5 {
+    font-weight:800;
+    color:var(--surya-navy);
+    font-size:1rem
+}
+.product-tag {
+    font-size:.72rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:var(--surya-magenta)
+}
+.price {
+    font-weight:800;
+    color:var(--surya-magenta);
+    font-size:1.08rem
+}
+.price-muted {
+    font-size:.83rem;
+    color:var(--surya-muted)
+}
+.product-actions {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap
+}
+.page-hero {
+    padding:150px 0 74px;
+    background:linear-gradient(110deg,rgba(24,61,102,.94),rgba(24,61,102,.78)),url('../assets/company/tampak-depan-pabrik.jpg') center/cover no-repeat;
+    color:#fff
+}
+.page-hero h1 {
+    font-size:clamp(2.5rem,4vw,3.8rem);
+    margin:12px 0
+}
+.page-hero p {
+    color:#e5edf4;
+    max-width:700px;
+    margin:0
+}
+.breadcrumb-custom {
+    font-size:.86rem;
+    color:#d9e5ef
+}
+.breadcrumb-custom a {
+    color:var(--surya-yellow)
+}
+.timeline {
+    border-left:3px solid #f1d36c;
+    padding-left:24px;
+    margin-left:10px
+}
+.timeline-item {
+    position:relative;
+    padding-bottom:24px
+}
+.timeline-item:before {
+    content:'';
+    position:absolute;
+    left:-33px;
+    top:5px;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:var(--surya-magenta);
+    border:3px solid white;
+    box-shadow:0 0 0 2px var(--surya-magenta)
+}
+.timeline-item h5 {
+    font-weight:800;
+    color:var(--surya-navy)
+}
+.timeline-item p {
+    color:var(--surya-muted);
+    margin:0
+}
+.notice-card {
+    display:flex;
+    gap:15px;
+    background:#fff8e6;
+    border:1px solid #f3e1a8;
+    border-radius:16px;
+    padding:18px;
+    color:#6c5516
+}
+.notice-card i {
+    font-size:1.4rem;
+    margin-top:2px
+}
+.notice-card h4 {
+    font-size:1rem;
+    font-weight:800;
+    margin-bottom:4px
+}
+.notice-card p {
+    margin:0;
+    font-size:.9rem
+}
+.org-chart-img {
+    width:100%;
+    border:1px solid #e8edf2;
+    border-radius:16px;
+    padding:12px;
+    background:white
+}
+.org-role {
+    border-left:4px solid var(--surya-magenta);
+    padding:12px 16px;
+    background:#fff;
+    border-radius:0 12px 12px 0;
+    margin-bottom:12px;
+    box-shadow:0 5px 18px rgba(24,61,102,.05)
+}
+.org-role strong {
+    color:var(--surya-navy)
+}
+.process-card {
+    padding:0
+}
+.process-card img {
+    width:100%;
+    height:190px;
+    object-fit:cover
+}
+.process-card .p-4 {
+    padding:22px!important
+}
+.step-number {
+    display:inline-grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--surya-yellow);
+    color:var(--surya-navy);
+    font-weight:900;
+    margin-bottom:12px
+}
+.legal-card {
+    padding:24px
+}
+.legal-card i {
+    font-size:1.8rem;
+    color:var(--surya-magenta)
+}
+.certificate-img {
+    width:100%;
+    max-width:420px;
+    border-radius:12px;
+    border:1px solid #e6e6e6;
+    box-shadow:0 12px 32px rgba(0,0,0,.08)
+}
+.map-frame {
+    width:100%;
+    height:360px;
+    border:0;
+    border-radius:18px
+}
+.contact-panel {
+    background:var(--surya-navy);
+    color:#fff;
+    padding:30px;
+    border-radius:22px;
+    height:100%
+}
+.contact-panel a {
+    color:#fff
+}
+.contact-line {
+    display:flex;
+    gap:14px;
+    margin:18px 0
+}
+.contact-line i {
+    color:var(--surya-yellow);
+    font-size:1.2rem;
+    margin-top:4px
+}
+.filter-btn {
+    border:1px solid #e4e8ed;
+    background:#fff;
+    color:var(--surya-navy);
+    padding:9px 16px;
+    border-radius:999px;
+    font-weight:700
+}
+.filter-btn.active,.filter-btn:hover {
+    background:var(--surya-navy);
+    border-color:var(--surya-navy);
+    color:#fff
+}
+.cart-item {
+    display:flex;
+    gap:15px;
+    padding:16px 0;
+    border-bottom:1px solid #edf0f3
+}
+.cart-item img {
+    width:88px;
+    height:88px;
+    object-fit:contain;
+    background:var(--surya-cream);
+    border-radius:12px
+}
+.cart-item h5 {
+    font-size:1rem;
+    font-weight:800;
+    color:var(--surya-navy)
+}
+.qty-control {
+    display:flex;
+    align-items:center;
+    gap:9px
+}
+.qty-control button {
+    border:1px solid #dce2e8;
+    background:#fff;
+    border-radius:8px;
+    width:30px;
+    height:30px
+}
+.checkout-card {
+    padding:25px;
+    border:1px solid #e8edf2;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(22,48,75,.06);
+    position:sticky;
+    top:110px
+}
+.total-line {
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid #e8edf2;
+    margin-top:20px;
+    padding-top:16px;
+    font-weight:800
+}
+.form-control {
+    border-radius:10px;
+    padding:12px
+}
+.footer {
+    background:#102b45;
+    color:#dce6ef
+}
+.footer h5,.footer h6 {
+    color:#fff;
+    font-weight:800
+}
+.footer a {
+    display:block;
+    color:#dce6ef;
+    margin:9px 0
+}
+.footer a:hover {
+    color:var(--surya-yellow)
+}
+.footer-brand {
+    display:flex;
+    align-items:center;
+    gap:10px
+}
+.footer-brand img {
+    width:130px;
+    background:#fff;
+    border-radius:5px;
+    padding:3px
+}
+.footer-brand .brand-text {
+    color:#fff
+}
+.footer-brand .brand-text small {
+    color:#dce6ef
+}
+.wa-float {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:1020;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#20c66b;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:1.8rem;
+    box-shadow:0 8px 22px rgba(0,0,0,.2)
+}
+.wa-float:hover {
+    color:#fff;
+    transform:translateY(-3px)
+}
+.small-note {
+    font-size:.8rem;
+    color:var(--surya-muted)
+}
+@media(max-width:991.98px) {
+    .navbar {
+        padding-top:10px!important;
+        padding-bottom:10px!important
+    }
+    .navbar-collapse {
+        background:#fff;
+        padding:10px 12px 16px;
+        margin-top:10px;
+        border-top:1px solid #edf0f3;
+        max-height:calc(100vh - 82px);
+        overflow-y:auto
+    }
+    .navbar-nav {
+        align-items:stretch!important
+    }
+    .navbar .nav-link {
+        padding:.65rem .5rem!important;
+        border-bottom:1px solid #f2f4f6
+    }
+    .navbar .btn {
+        align-self:flex-start;
+        margin-left:0!important
+    }
+    .hero-home {
+        min-height:620px;
+        padding:130px 0 75px
+    }
+    .hero-home .col-lg-7 {
+        width:100%
+    }
+    .section-pad {
+        padding:64px 0
+    }
+    .page-hero {
+        padding:125px 0 60px
+    }
+    .checkout-card {
+        position:static
+    }
+}
+@media(max-width:575.98px) {
+    .navbar-brand img {
+        width:116px
+    }
+    .hero-home {
+        min-height:590px;
+        padding-top:125px;
+        background-position:58% center
+    }
+    .hero-home h1 {
+        font-size:2.55rem
+    }
+    .hero-home p {
+        font-size:1rem
+    }
+    .hero-trust {
+        display:grid;
+        gap:8px
+    }
+    .section-pad {
+        padding:52px 0
+    }
+    .page-hero {
+        padding:118px 0 48px
+    }
+    .page-hero h1 {
+        font-size:2.4rem
+    }
+    .product-card img {
+        height:190px
+    }
+    .product-card .card-body {
+        padding:15px
+    }
+    .map-frame {
+        height:290px
+    }
+    .contact-panel {
+        padding:23px
+    }
+    .stat-item strong {
+        font-size:1.6rem
+    }
+    .cart-item {
+        gap:10px
+    }
+    .cart-item img {
+        width:72px;
+        height:72px
+    }
+}
+
+/* =========================================
+   GLOBAL TEXT JUSTIFY
+   Semua teks justify, kecuali judul
+========================================= */
+
+/* Paragraf dan teks konten */
+body p,
+body li,
+body span,
+body label,
+body td,
+body th,
+body blockquote,
+body .card-text,
+body .section-lead,
+body .info-card,
+body .timeline-item,
+body .notice-card,
+body .contact-line,
+body .contact-panel p,
+body .footer p,
+body .small-note,
+body .org-role,
+body .legal-card,
+body .process-card {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Deskripsi Hero */
+.hero-home p,
+.page-hero p {
+    text-align: justify;
+}
+
+/* Deskripsi produk */
+.product-card .card-body p,
+.product-card .price-muted {
+    text-align: justify;
+}
+
+/* Pertahankan perataan judul sesuai desain awal */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.section-heading,
+.hero-home h1,
+.page-hero h1,
+.info-card h4,
+.process-card h4,
+.timeline-item h5,
+.product-card h5,
+.notice-card h4,
+.footer h5,
+.footer h6 {
+    text-align: initial;
+}
+
+/* Navbar dan identitas brand */
+.navbar,
+.navbar *,
+.navbar-brand,
+.brand-text,
+.footer-brand {
+    text-align: initial;
+}
+
+/* Tombol dan elemen interaktif */
+button,
+.btn,
+.filter-btn,
+.wa-float,
+.step-number,
+.icon-bubble {
+    text-align: center;
+}
+
+/* Statistik */
+.stat-item,
+.stat-item * {
+    text-align: center;
+}

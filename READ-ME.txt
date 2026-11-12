@@ -1,0 +1,12 @@
+  =>  Template Name    : Acuas - Drinking Water Website Template
+
+  =>  Template Link    : https://htmlcodex.com/drinking-water-website-template
+
+  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : HTML Codex
+
+  =>  Author Website   : https://htmlcodex.com
+
+Catatan source code:
+File HTML dan CSS sudah dirapikan menjadi beberapa baris dengan indentasi agar lebih mudah dibaca dan dipelajari di Visual Studio Code. File bootstrap.min.css merupakan library Bootstrap pihak ketiga yang memang tetap dalam format minified.
